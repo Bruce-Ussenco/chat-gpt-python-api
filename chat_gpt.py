@@ -12,19 +12,22 @@ headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/js
 link = "https://api.openai.com/v1/chat/completions"
 model_id = "gpt-3.5-turbo"
 
-content = "Say this is a test!"
-input_message = {
+print("")
+
+#content = "Say this is a test!"
+content = input("Ask something to Chat GPT:\n")
+data = {
     "model": model_id,
     "messages": [{"role": "user", "content": content}]
 }
-input_message = json.dumps(input_message)
+data = json.dumps(data)
 
-request = requests.post(link, headers=headers, data=input_message)
+request = requests.post(link, headers=headers, data=data)
 response = request.json()
 text_response = response["choices"][0]["message"]["content"]
 
 #print(request.text)
-print("----------")
 print(text_response)
-print("----------")
+
+print("")
 
