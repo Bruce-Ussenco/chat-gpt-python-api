@@ -30,8 +30,8 @@ text_response = response["choices"][0]["message"]["content"]
 
 print("")
 print("Output:")
-print("-" * 30)
+print("-" * 50)
 print(text_response)
-print("-" * 30)
+print("-" * 50)
 print("")
 
