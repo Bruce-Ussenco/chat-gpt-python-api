@@ -27,7 +27,11 @@ response = request.json()
 text_response = response["choices"][0]["message"]["content"]
 
 #print(request.text)
-print(text_response)
 
+print("")
+print("Output:")
+print("-" * 30)
+print(text_response)
+print("-" * 30)
 print("")
 
